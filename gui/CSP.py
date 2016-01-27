@@ -1,7 +1,10 @@
 
 from collections import OrderedDict as OD
-from util.mainwnd import control_cb
-from util import Data, dev_io_cb
+from util import Data, dev_io_cb, control_cb
+from util.columns import *
+
+def columns():
+    return get_columns([c_ip_addr])
 
 def csp_fmt_cb(val, read=True):
     if read:
