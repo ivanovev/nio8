@@ -38,14 +38,32 @@ def LNAHPSU_alarms(ip_addr='192.168.0.1'):
     """
     return telnet(ip_addr, 'alarms')
 
-def LNAHPSU_thri(ip_addr='192.168.0.1', thri=''):
+def LNAHPSU_thri1(ip_addr='192.168.0.1', thri=''):
     """
-    Чтение/задание порога по току
+    Чтение/задание порога по току 1
     @param ip_addr - ip-адрес устройства
     @param thri - порог по току
     @return 1 - порог по току
     """
-    return telnet(ip_addr, 'thri %s' % thri)
+    return telnet(ip_addr, 'thri1 %s' % thri)
+
+def LNAHPSU_thri2(ip_addr='192.168.0.1', thri=''):
+    """
+    Чтение/задание порога по току 2
+    @param ip_addr - ip-адрес устройства
+    @param thri - порог по току
+    @return 1 - порог по току
+    """
+    return telnet(ip_addr, 'thri2 %s' % thri)
+
+def LNAHPSU_thri3(ip_addr='192.168.0.1', thri=''):
+    """
+    Чтение/задание порога по току 3
+    @param ip_addr - ip-адрес устройства
+    @param thri - порог по току
+    @return 1 - порог по току
+    """
+    return telnet(ip_addr, 'thri3 %s' % thri)
 
 def LNAHPSU_thru1(ip_addr='192.168.0.1', thru1=''):
     """
@@ -82,4 +100,22 @@ def LNAHPSU_thru4(ip_addr='192.168.0.1', thru4=''):
     @return 1 - порог по напряжению 4
     """
     return telnet(ip_addr, 'thru4 %s' % thru4)
+
+def LNAHPSU_umi0(ip_addr='192.168.0.1', umi0=''):
+    """
+    Чтение/задание начального значения тока (БП выкл)
+    @param ip_addr - ip-адрес устройства
+    @param umi0
+    @return umi0
+    """
+    return telnet(ip_addr, 'umi0 %s' % umi0)
+
+def LNAHPSU_kmi(ip_addr='192.168.0.1', kmi=''):
+    """
+    Чтение/задание значения коэффициента домножения значения тока с АЦП
+    @param ip_addr - ip-адрес устройства
+    @param kmi
+    @return kmi
+    """
+    return telnet(ip_addr, 'kmi %s' % kmi)
 
